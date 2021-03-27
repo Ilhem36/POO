@@ -14,5 +14,9 @@ public class ARN {
         this.sequence = sequence;
         this.appariement = null;
     }
+    //class String : la séquence qui est un input
+    //class main : exécuter le programme
+    //class: algorithme nussinov
+    // what do you think Théo le beaugoss?
 
 }
