@@ -99,6 +99,7 @@ public class Nussinov {
         else {
             Nussinov nussinov = new Nussinov(args[0]);
             System.out.println("Matched pairs: " + nussinovAlgo(0, args[0].toCharArray().length - 1));
+            System.out.println(args[0]);
             System.out.println("Secondary Structure after folding: " +  backtrack(0, args[0].toCharArray().length - 1));
 
             // Example input:
