@@ -38,6 +38,15 @@ public class ARN {
         }
     }
 
+    public boolean equals(ARN sequence2){
+        return this.matching.equals(sequence2.getMatching());
+    }
+
+    public boolean perfectlyEquals(ARN sequence2){
+        return this.equals(sequence2) && this.sequence.equals(sequence2.getSequence());
+    }
+
+    @Override
     public String toString(){
         String result;
         result = "sequence : " + this.sequence + "\n";
@@ -47,19 +56,14 @@ public class ARN {
         return result;
     }
 
-    public String Nussinov(){
-        // Algorithme de Nussinov
-    }
-
-
-
-
 
     public static void main(String args[]) throws sizeNotCorrectException {
         ARN seq1 = new ARN("ATCGGCTCGA");
+        // seq1.setMatching("((------))");
         System.out.println(seq1);
-        seq1.setMatching("((-----))");
-        System.out.println(seq1);
+        ARN seq2 = new ARN("ATCGGCACGA");
+        // seq2.setMatching("((------))");
+        System.out.println(seq1.equals(seq2));
 
     }
 
