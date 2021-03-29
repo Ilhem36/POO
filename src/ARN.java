@@ -2,17 +2,17 @@ public class ARN {
 
     // Attributes
     private String sequence;
-    private String appariement;
+    private String match;
 
     // Constructors
-    public ARN(String sequence, String appariement){
+    public ARN(String sequence, String match ) throws Sizeincorrect Exception {
         this.sequence = sequence;
-        this.appariement = appariement;
+        this.match= match;
     }
 
     public ARN(String sequence){
         this.sequence = sequence;
-        this.appariement = null;
+        this.match = null;
     }
     //class String : la séquence qui est un input
     //class main : exécuter le programme
