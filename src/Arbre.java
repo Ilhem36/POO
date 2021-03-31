@@ -26,10 +26,10 @@ public class Arbre {
             level++;
             int size = queue.size();
             while (size != 0) {
-                current = queue.peek(); // on récupére le premier élément de la liste Queue sans le supprimer et on le stocke dans le noeud courrant
+                current = queue.peek(); // on récupére le premier élément de la liste Queue sans le supprimer et on le stocke dans le noeud current
                 queue.poll(); // on le supprime dans ce cas
                 if (level >= start && level <= end) {
-                    System.out.println(current.key + " ");
+                    System.out.print(current.key + " ");
                 }
                 if (current.left != null) {
                     queue.add(current.left);
@@ -38,7 +38,7 @@ public class Arbre {
                     size--;
                 }// end of while
                 if (level >= start && level <= end) {
-                    System.out.println("  ");
+                    System.out.print("\n");
 
 
                 }
