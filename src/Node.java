@@ -1,6 +1,6 @@
 
 public class Node   {
-    int key;
+    int key;// va contenir la valeur du noeud
     // une déclaration récurisive
    Node  left;
    Node  right;

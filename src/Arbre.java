@@ -19,14 +19,14 @@ public class Arbre {
         }
         Queue<Node> queue = new LinkedList<Node>();
         queue.add(root);
-        Node current = null;
-        int level = 0;// le niveau
+        Node current = null; // le noeud en cours
+        int level = 0;// le niveau ou on est dans l'arbre
         // parcourir l'arbre
         while (!queue.isEmpty()) {// while list is not empty
             level++;
             int size = queue.size();
             while (size != 0) {
-                current = queue.peek(); // on récupére le premier élément de la liste Queue sans le supprimer
+                current = queue.peek(); // on récupére le premier élément de la liste Queue sans le supprimer et on le stocke dans le noeud courrant
                 queue.poll(); // on le supprime dans ce cas
                 if (level >= start && level <= end) {
                     System.out.println(current.key + " ");
@@ -38,7 +38,7 @@ public class Arbre {
                     size--;
                 }// end of while
                 if (level >= start && level <= end) {
-                    System.out.println();
+                    System.out.println("  ");
 
 
                 }
